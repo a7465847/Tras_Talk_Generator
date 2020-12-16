@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const options = req.body
+  console.log(options)
   const trashTalk = trashTalkGenerator(options)
   res.render('index', { options, trashTalk })
 })
