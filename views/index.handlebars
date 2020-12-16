@@ -1,0 +1,67 @@
+<div class="container mt-5 ">
+    <h1 class="d-flex justify-content-center my-5 text-primary font-weight-bolder">你想對誰說幹話</h1>
+    <div class="row">
+        <form method="POST" action="/" class="d-flex justify-content-center flex-wrap">
+
+            <div class="col-sm-4">
+                <div class="card text-center">
+                    <label>
+                        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                            width="280" height="350" class="card-img-top" alt="Card image cap" />
+                        <div class="card-body">
+                            <h5 class="card-name">工程師</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around ">
+                            <input type="radio" name="job" value="工程師" {{#ifEquals options.job '工程師' }} checked
+                                {{/ifEquals}}>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center">
+                    <label>
+                        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                            width="280" height="350" class="card-img-top" alt="Card image cap" />
+                        <div class="card-body">
+                            <h5 class="card-name">設計師</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around ">
+                            <input type="radio" name="job" value="設計師" {{#ifEquals options.job '設計師' }} checked
+                                {{/ifEquals}}>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center">
+                    <label>
+                        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                            width="280" height="350" class="card-img-top" alt="Card image cap" />
+                        <div class="card-body">
+                            <h5 class="card-name">創業家</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around ">
+                            <input type="radio" name="job" value="創業家" {{#ifEquals options.job '創業家' }} checked
+                                {{/ifEquals}}>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between mt-5">
+                <div class="col-2 " style="width: 100px">
+                    <button type="submit" class="btn btn-primary">產生幹話</button>
+                </div>
+                {{#if trashTalk}}
+                    <div class="col-10">
+                        <div class="card" style="width: 650px">
+                            <div class="card-body">
+                                <span>{{trashTalk}}</span>
+                            </div>
+                        </div>
+                    </div>
+                {{/if}}
+            </div>
+        </form>
+    </div>
+</div>
